@@ -17,8 +17,17 @@ def get_node_info():
         node_info = response.json()
         
         print("\nNode Info:")
-        for key, value in node_info.items():
-            print(f"{key}: {value}")
+        print(f"Node ID: {node_info.get('node_id')}")
+        print(f"Public IP: {node_info.get('public_ip')}")
+        print(f"Operations: {node_info.get('ops')}")
+        
+        print("\nIPv4 Info:")
+        for key, value in node_info.get('ipv4', {}).items():
+            print(f"  {key.capitalize()}: {value}")
+        
+        print("\nIPv6 Info:")
+        for key, value in node_info.get('ipv6', {}).items():
+            print(f"  {key.capitalize()}: {value}")
     
     except requests.exceptions.RequestException as e:
         print(f"Error fetching node info: {e}")
