@@ -1,6 +1,7 @@
 # fetch_value.py
 
 import requests
+import argparse
 
 def fetch_value(key):
     url = f"http://opendht.moukaeritai.work:4223/key/{key}"
@@ -26,5 +27,8 @@ def fetch_value(key):
         print(f"Error parsing JSON response: {e}")
 
 if __name__ == "__main__":
-    key = "example_key"
-    fetch_value(key)
+    parser = argparse.ArgumentParser(description='Fetch a value from the OpenDHT system.')
+    parser.add_argument('key', type=str, help='The key for the value to fetch.')
+
+    args = parser.parse_args()
+    fetch_value(args.key)

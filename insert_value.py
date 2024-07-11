@@ -2,6 +2,7 @@
 
 import requests
 import json
+import argparse
 
 def insert_value(key, value):
     url = f"http://opendht.moukaeritai.work:4223/key/{key}"
@@ -23,6 +24,9 @@ def insert_value(key, value):
         print(f"Error parsing response: {e}")
 
 if __name__ == "__main__":
-    key = "example_key"
-    value = "example_value"
-    insert_value(key, value)
+    parser = argparse.ArgumentParser(description='Insert a value into the OpenDHT system.')
+    parser.add_argument('key', type=str, help='The key for the value to insert.')
+    parser.add_argument('value', type=str, help='The value to insert.')
+
+    args = parser.parse_args()
+    insert_value(args.key, args.value)
