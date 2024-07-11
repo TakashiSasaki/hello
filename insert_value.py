@@ -1,27 +1,36 @@
 # insert_value.py
 
 import requests
-import json
 import argparse
+import json
+import base64
 
 def insert_value(key, value):
     url = f"http://opendht.moukaeritai.work:4223/key/{key}"
-    payload = {
-        "value": value
+    headers = {'Content-Type': 'application/json'}
+    data = {
+        "data": base64.b64encode(value.encode()).decode(),
+        "type": 0
     }
-    
+
+    print("URL:", url)
+    print("Headers:", headers)
+    print("Data:", json.dumps(data))
+
     try:
-        response = requests.post(url, data=json.dumps(payload), headers={"Content-Type": "application/json"})
-        response.raise_for_status()  # HTTPエラーが発生した場合、例外を発生させる
-        
+        response = requests.post(url, headers=headers, data=json.dumps(data))
+        response.raise_for_status()  # Raise an HTTPError for bad responses (4xx and 5xx)
         print("Value inserted successfully.")
         print("Response:")
-        print(response.text)
-    
-    except requests.exceptions.RequestException as e:
-        print(f"Error inserting value: {e}")
-    except ValueError as e:
-        print(f"Error parsing response: {e}")
+        print(response.json())
+    except requests.exceptions.HTTPError as http_err:
+        print(f"HTTP error occurred: {http_err}")  # Python 3.6
+        print("Response content:")
+        print(response.content.decode())
+    except Exception as err:
+        print(f"Other error occurred: {err}")  # Python 3.6
+        print("Response content:")
+        print(response.content.decode() if response else "No response")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Insert a value into the OpenDHT system.')
