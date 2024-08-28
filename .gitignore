@@ -1,0 +1,57 @@
+# Node.js関連
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ローカル環境に依存するファイル
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# TypeScriptのビルド出力
+dist/
+build/
+out/
+
+# TypeScriptキャッシュ
+*.tsbuildinfo
+
+# Webpackのキャッシュ
+.cache/
+.parcel-cache/
+
+# VSCode関連
+.vscode/
+
+# IDE関連
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Coverageディレクトリ（テストカバレッジレポート）
+coverage/
+
+# テスト出力
+junit.xml
+test-results/
+
+# Miscellaneous
+*.pem
+*.key
+*.crt
+*.swp
