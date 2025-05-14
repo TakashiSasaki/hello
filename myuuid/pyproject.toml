@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "myuuid"
+version = "0.1.0"
+description = "A simple module to generate deterministic UUIDv5."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md" # 必要に応じて作成してください
+
+[tool.poetry.dependencies]
+python = "^3.8" # 使用するPythonのバージョンに合わせて適宜変更してください
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0" # テストフレームワーク
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
