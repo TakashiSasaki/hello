@@ -1,2 +1,3 @@
 ## Gemini Added Memories
 - When committing changes, create a temporary file named `commit_message.txt` with the commit message content, and then use `git commit -F commit_message.txt`.
+- The general procedure for merging a remote branch is: 1. Add the remote repository (`git remote add <remote_name> <path>`). 2. Show remote branches (`git remote show <remote_name>`). 3. Pull and merge the specific remote branch, using `--allow-unrelated-histories` if necessary (`git pull <remote_name> <remote_branch_name> --allow-unrelated-histories`). 4. (Optional) Remove the remote repository (`git remote remove <remote_name>`).
