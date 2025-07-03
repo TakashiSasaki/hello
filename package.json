@@ -1,0 +1,21 @@
+{
+  "name": "local-file-web-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/auth": "^4.6.1",
+    "@fastify/basic-auth": "^5.1.1",
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/session": "^10.8.0",
+    "bcrypt": "^5.1.1",
+    "fastify": "^4.27.0"
+  }
+}
