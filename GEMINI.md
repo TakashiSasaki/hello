@@ -9,3 +9,4 @@
 - cpコマンドの代わりにcopyを使ってください。
 - mkdirコマンドの代わりにmdを使ってください。
 - Git commit messages should be in English.
+- The user uses `es.exe -export-efu filelist.efu -path .` to create a file list named `filelist.efu` in the current directory.
