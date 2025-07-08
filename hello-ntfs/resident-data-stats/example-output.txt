@@ -1,0 +1,31 @@
+Collecting files: 100%|████████████████████████████████████████████████████████| 6518/6518 [00:00<00:00, 55732.52dir/s]
+Total files collected: 47836
+Processing files: 100%|████████████████████████████████████████████████████████| 47836/47836 [19:56<00:00, 39.97file/s]
+
+Resident Data Statistics (excluding zero-byte files):
+  Count:  10771
+  Min file size (bytes):  1
+  Max file size (bytes):  732
+  Median file size (bytes):  248
+  Mean file size (bytes):  270.9518150589546
+  Standard Deviation (bytes):  173.1753009658866
+
+Non-Resident Data Statistics (excluding zero-byte files):
+  Count:  36909
+  Min file size (bytes):  2
+  Max file size (bytes):  1709262352
+  Median file size (bytes):  2865
+  Mean file size (bytes):  657183.6980411282
+  Standard Deviation (bytes):  24039793.647739377
+
+All Files Statistics (excluding zero-byte files):
+  Count:  47680
+  Min file size (bytes):  1
+  Max file size (bytes):  1709262352
+  Median file size (bytes):  1737.0
+  Mean file size (bytes):  508785.8962458054
+  Standard Deviation (bytes):  21152614.253749114
+
+Zero-byte File Count: 128
+
+Processing complete. Press Enter to exit...
